@@ -10,8 +10,7 @@ const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200"
 
 export const metadata: Metadata = {
   title: 'Made by Wideech',
-  description: 'Created with v0',
-  generator: 'v0.app',
+
 }
 
 export default function RootLayout({
