@@ -75,7 +75,7 @@ export default function Accommodations({ scrollY }: AccommodationsProps) {
                 <div>
                   <div className="flex items-start justify-between mb-6">
                     <h3 className="text-2xl font-bold text-foreground">{room.name}</h3>
-                    <p className="text-lg font-bold text-accent">{room.price}</p>
+                    <p className="text-lg font-bold text-accent" style={{ color: '#003580' }}>{room.price}</p>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4 mb-6">
@@ -83,14 +83,14 @@ export default function Accommodations({ scrollY }: AccommodationsProps) {
                       const Icon = amenity.icon
                       return (
                         <div key={index} className="flex items-center gap-2">
-                          <Icon className="w-5 h-5 text-accent flex-shrink-0" />
+                          <Icon className="w-5 h-5 flex-shrink-0" style={{ color: '#003580' }} />
                           <span className="text-sm text-foreground/80">{amenity.label}</span>
                         </div>
                       )
                     })}
                   </div>
 
-                  <a href="#" className="text-accent font-semibold text-sm hover:underline mb-6 inline-block">
+                  <a href="#" className="text-accent font-semibold text-sm hover:underline mb-6 inline-block" style={{ color: '#003580' }}>
                     More Details →
                   </a>
                 </div>

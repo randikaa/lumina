@@ -20,7 +20,7 @@ export default function Gallery({ scrollY }: GalleryProps) {
     <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-accent mb-4 text-balance">Gallery</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-accent mb-4 text-balance" style={{ color: '#003580' }}>Gallery</h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
             Take a visual tour through our stunning property
           </p>

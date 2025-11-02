@@ -16,7 +16,7 @@ export default function About() {
 
           {/* Content */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-accent mb-6 text-balance">About Lumina Hotel</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance" style={{ color: '#003580' }}>About Lumina Hotel</h2>
             <p className="text-lg text-foreground/80 mb-4 leading-relaxed">
               Nestled on pristine beaches with breathtaking ocean views, Lumina Hotel stands as a beacon of luxury and
               elegance. Our commitment to excellence ensures every guest experiences unparalleled service and comfort.
@@ -28,15 +28,15 @@ export default function About() {
             </p>
             <div className="grid grid-cols-3 gap-4">
               <div>
-                <div className="text-3xl font-bold text-accent">450+</div>
+                <div className="text-3xl font-bold text-accent" style={{ color: '#003580' }}>450+</div>
                 <div className="text-sm text-foreground/60">Rooms & Suites</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent">20+</div>
+                <div className="text-3xl font-bold text-accent" style={{ color: '#003580' }}>20+</div>
                 <div className="text-sm text-foreground/60">Years Experience</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent">5★</div>
+                <div className="text-3xl font-bold text-accent" style={{ color: '#003580' }}>5★</div>
                 <div className="text-sm text-foreground/60">Luxury Rating</div>
               </div>
             </div>

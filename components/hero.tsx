@@ -36,11 +36,11 @@ export default function Hero({ scrollY }: HeroProps) {
             willChange: "transform",
           }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 text-balance">Welcome to Lumina</h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 text-balance">The Ocean Calling You</h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto text-balance">
             Experience luxury and tranquility in the heart of paradise
           </p>
-          <button className="px-8 py-3 bg-accent text-primary rounded-lg font-semibold hover:bg-accent/90 transition">
+          <button className="px-8 py-3 bg-white/20 backdrop-blur-md text-white rounded-lg font-semibold hover:bg-white/30 transition">
             Discover More
           </button>
         </div>

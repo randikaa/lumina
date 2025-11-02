@@ -44,7 +44,7 @@ export default function Amenities({ scrollY }: AmenitiesProps) {
     <section id="amenities" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-accent mb-4 text-balance">World-Class Amenities</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-accent mb-4 text-balance" style={{ color: '#003580' }}>World-Class Amenities</h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
             Discover everything you need for an unforgettable stay
           </p>
