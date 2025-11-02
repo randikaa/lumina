@@ -6,32 +6,32 @@ interface AmenitiesProps {
 
 const amenities = [
   {
-    icon: "🏊",
+    image: "https://cdn.jsdelivr.net/gh/Team-Hologram/trsm/pool.jpg",
     title: "Infinity Pool",
     description: "Olympic-sized infinity pool overlooking the ocean with VIP cabanas",
   },
   {
-    icon: "🍽️",
+    image: "https://cdn.jsdelivr.net/gh/Team-Hologram/trsm/dining.jpg",
     title: "Fine Dining",
     description: "Award-winning restaurants featuring international and local cuisine",
   },
   {
-    icon: "💆",
+    image: "https://cdn.jsdelivr.net/gh/Team-Hologram/trsm/spa.jpg",
     title: "Spa & Wellness",
     description: "Full-service spa with treatments inspired by ancient traditions",
   },
   {
-    icon: "🏋️",
+    image: "https://cdn.jsdelivr.net/gh/Team-Hologram/trsm/fitness.jpg",
     title: "Fitness Center",
     description: "State-of-the-art gym with personal trainers and yoga studios",
   },
   {
-    icon: "🎭",
+    image: "https://cdn.jsdelivr.net/gh/Team-Hologram/trsm/Entertainment.jpg",
     title: "Entertainment",
     description: "Live performances and cultural events throughout the week",
   },
   {
-    icon: "📚",
+    image: "https://cdn.jsdelivr.net/gh/Team-Hologram/trsm/people.jpg",
     title: "Business Center",
     description: "Fully equipped meeting rooms and high-speed internet",
   },
@@ -59,11 +59,19 @@ export default function Amenities({ scrollY }: AmenitiesProps) {
           {amenities.map((amenity, index) => (
             <div
               key={index}
-              className="p-8 rounded-lg bg-card hover:shadow-lg transition-shadow duration-300 border border-accent/10 text-center"
+              className="rounded-2xl bg-card overflow-hidden hover:shadow-2xl transition-all duration-300"
             >
-              <div className="text-5xl mb-4">{amenity.icon}</div>
-              <h3 className="text-2xl font-bold text-foreground mb-3">{amenity.title}</h3>
-              <p className="text-foreground/70 leading-relaxed">{amenity.description}</p>
+              <div className="relative h-80 overflow-hidden">
+                <img
+                  src={amenity.image}
+                  alt={amenity.title}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6 bg-white">
+                <h3 className="text-2xl font-bold text-foreground mb-3">{amenity.title}</h3>
+                <p className="text-foreground/70 leading-relaxed">{amenity.description}</p>
+              </div>
             </div>
           ))}
         </div>

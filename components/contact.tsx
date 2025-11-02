@@ -43,19 +43,19 @@ export default function Contact({ scrollY }: ContactProps) {
               transform: `translateY(${parallaxOffset}px)`,
             }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-accent mb-8 text-balance">Get in Touch</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-accent mb-8 text-balance" style={{ color: '#003580' }}>Get in Touch</h2>
 
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">Address</h3>
-                <p className="text-foreground/70">123 Paradise Beach Road</p>
-                <p className="text-foreground/70">Coastal City, CC 12345</p>
+                <p className="text-foreground/70">41 Galle Road</p>
+                <p className="text-foreground/70">Beruwala</p>
               </div>
 
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">Phone</h3>
-                <p className="text-foreground/70">+1 (555) 123-4567</p>
-                <p className="text-foreground/70">Reservations: +1 (555) 987-6543</p>
+                <p className="text-foreground/70">+94 (76) 081-6740</p>
+                <p className="text-foreground/70">Reservations: +94 (76) 081-9658</p>
               </div>
 
               <div>
@@ -145,7 +145,7 @@ export default function Contact({ scrollY }: ContactProps) {
 
               <button
                 type="submit"
-                className="w-full py-3 bg-accent text-primary rounded-lg hover:bg-accent/90 transition font-semibold"
+                className="w-full py-3 bg-[#006CE4] text-white rounded-lg hover:bg-black hover:text-white transition font-semibold"
               >
                 Send Message
               </button>

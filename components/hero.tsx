@@ -36,7 +36,7 @@ export default function Hero({ scrollY }: HeroProps) {
             willChange: "transform",
           }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 text-balance">The Ocean Calling You</h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 text-balance">The Ocean is Calling You</h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto text-balance">
             Experience luxury and tranquility in the heart of paradise
           </p>

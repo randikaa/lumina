@@ -2,6 +2,8 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import BookingModal from "./booking-modal"
+import { smoothScrollTo } from "@/lib/smooth-scroll"
 
 interface NavigationProps {
   scrollY: number
@@ -9,9 +11,17 @@ interface NavigationProps {
 
 export default function Navigation({ scrollY }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false)
   const isScrolled = scrollY > 50
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
+    e.preventDefault()
+    smoothScrollTo(target)
+    setIsOpen(false)
+  }
+
   return (
+    <>
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
       ? "bg-background/30 backdrop-blur-xl"
       : "bg-transparent"
@@ -23,22 +33,24 @@ export default function Navigation({ scrollY }: NavigationProps) {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="#about" className="text-sm text-foreground/80 hover:text-white transition">
+          <Link href="#about" onClick={(e) => handleNavClick(e, "#about")} className="text-sm text-foreground/80 hover:text-white transition">
             About
           </Link>
-          <Link href="#accommodations" className="text-sm text-foreground/80 hover:text-white transition">
+          <Link href="#accommodations" onClick={(e) => handleNavClick(e, "#accommodations")} className="text-sm text-foreground/80 hover:text-white transition">
             Rooms
           </Link>
-          <Link href="#amenities" className="text-sm text-foreground/80 hover:text-white transition">
+          <Link href="#amenities" onClick={(e) => handleNavClick(e, "#amenities")} className="text-sm text-foreground/80 hover:text-white transition">
             Amenities
           </Link>
-          <Link href="#gallery" className="text-sm text-foreground/80 hover:text-white transition">
+          <Link href="#gallery" onClick={(e) => handleNavClick(e, "#gallery")} className="text-sm text-foreground/80 hover:text-white transition">
             Gallery
           </Link>
-          <Link href="#contact" className="text-sm text-foreground/80 hover:text-white transition">
+          <Link href="#contact" onClick={(e) => handleNavClick(e, "#contact")} className="text-sm text-foreground/80 hover:text-white transition">
             Contact
           </Link>
-          <button className={`px-6 py-2 text-sm backdrop-blur-md rounded-lg transition flex items-center gap-2 ${isScrolled
+          <button 
+            onClick={() => setIsBookingModalOpen(true)}
+            className={`px-6 py-2 text-sm backdrop-blur-md rounded-lg transition flex items-center gap-2 ${isScrolled
             ? "text-white hover:opacity-90"
             : "bg-white/20 text-white hover:bg-white/30"
             }`} style={isScrolled ? { backgroundColor: '#006CE4' } : {}}>
@@ -60,22 +72,24 @@ export default function Navigation({ scrollY }: NavigationProps) {
         {isOpen && (
           <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl md:hidden">
             <div className="flex flex-col gap-4 p-4">
-              <Link href="#about" className="text-sm text-foreground/80 hover:text-white transition">
+              <Link href="#about" onClick={(e) => handleNavClick(e, "#about")} className="text-sm text-foreground/80 hover:text-white transition">
                 About
               </Link>
-              <Link href="#accommodations" className="text-sm text-foreground/80 hover:text-white transition">
+              <Link href="#accommodations" onClick={(e) => handleNavClick(e, "#accommodations")} className="text-sm text-foreground/80 hover:text-white transition">
                 Rooms
               </Link>
-              <Link href="#amenities" className="text-sm text-foreground/80 hover:text-white transition">
+              <Link href="#amenities" onClick={(e) => handleNavClick(e, "#amenities")} className="text-sm text-foreground/80 hover:text-white transition">
                 Amenities
               </Link>
-              <Link href="#gallery" className="text-sm text-foreground/80 hover:text-white transition">
+              <Link href="#gallery" onClick={(e) => handleNavClick(e, "#gallery")} className="text-sm text-foreground/80 hover:text-white transition">
                 Gallery
               </Link>
-              <Link href="#contact" className="text-sm text-foreground/80 hover:text-white transition">
+              <Link href="#contact" onClick={(e) => handleNavClick(e, "#contact")} className="text-sm text-foreground/80 hover:text-white transition">
                 Contact
               </Link>
-              <button className={`px-6 py-2 backdrop-blur-md rounded-lg transition flex items-center gap-2 ${isScrolled
+              <button 
+                onClick={() => setIsBookingModalOpen(true)}
+                className={`px-6 py-2 backdrop-blur-md rounded-lg transition flex items-center gap-2 ${isScrolled
                 ? "text-white hover:opacity-90"
                 : "bg-white/20 text-white hover:bg-white/30"
                 }`} style={isScrolled ? { backgroundColor: '#009fe3' } : {}}>
@@ -89,5 +103,9 @@ export default function Navigation({ scrollY }: NavigationProps) {
         )}
       </nav>
     </header>
+
+    {/* Booking Modal */}
+    <BookingModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
+    </>
   )
 }

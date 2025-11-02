@@ -64,7 +64,7 @@ export default function Footer() {
 
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
-            <p className="text-sm opacity-80">+1 (555) 123-4567</p>
+            <p className="text-sm opacity-80">+94 (76) 081-6740</p>
             <p className="text-sm opacity-80">info@luminahotel.com</p>
           </div>
         </div>
